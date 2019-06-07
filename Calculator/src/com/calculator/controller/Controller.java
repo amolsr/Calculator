@@ -245,7 +245,7 @@ public class Controller {
 			System.out.println(getOpListString());
 			setStr();
 
-		} else if (m.getOpList().size() == 0) {
+		} else if (m.getDisplayList().get(m.getDisplayList().size() - 1).equals('\u00B3')||m.getDisplayList().get(m.getDisplayList().size() - 1).equals('\u00B2')) {
 			m.setDisplayList(c);
 			power(b);
 			v.top.setText(getDisplayListString());
@@ -255,17 +255,16 @@ public class Controller {
 			setStr();
 
 		} else {
+			setStr();
 			m.setNumList(m.getTemp());
 			m.setDisplayList(m.getTemp());
-
 			m.setDisplayList(c);
 			power(b);
 			v.top.setText(getDisplayListString());
 			v.down.setText(adjust(m.getTemp()));
 			System.out.println(getIntListString());
-			System.out.println(getOpListString());
+			System.out.println(getOpListString());	
 			setStr();
-//			operate();
 		}
 	}
 
@@ -283,6 +282,7 @@ public class Controller {
 		m.getNumList().clear();
 		m.getOpList().clear();
 		m.setStr("");
+		m.setTemp(0.0d);
 	}
 
 	public static String adjust(Double d) {
@@ -292,7 +292,6 @@ public class Controller {
 	}
 
 	public static void deci() {
-		// TODO Auto-generated method stub
 		if (checkdeci(v.down.getText()))
 			v.down.setText(v.down.getText() + ".");
 
