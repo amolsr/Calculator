@@ -23,7 +23,7 @@ public class MainContainer extends KeyAdapter {
 	public JTextField down, top;
 	public Action num0Action, num1Action, num2Action, num3Action, num4Action, num5Action, num6Action, num7Action,
 			num8Action, num9Action, divAction, mulAction, addAction, subAction, eqAction, cAction, ceAction, delAction,
-			sqrAction, cubeAction,deciAction;
+			sqrAction, cubeAction, deciAction, invAction, signAction, rootAction;
 
 	/**
 	 * Create the application.
@@ -57,53 +57,43 @@ public class MainContainer extends KeyAdapter {
 		// TODO Auto-generated method stub
 		num0.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_NUMPAD0, 0, true),
 				"0");
-		num0.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_0, 0, true),
-				"0");
+		num0.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_0, 0, true), "0");
 		num0.getActionMap().put("0", num0Action);
 		num1.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_NUMPAD1, 0, true),
 				"1");
-		num1.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_1, 0, true),
-				"1");
+		num1.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_1, 0, true), "1");
 		num1.getActionMap().put("1", num1Action);
 		num2.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_NUMPAD2, 0, true),
 				"2");
-		num2.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_2, 0, true),
-				"2");
+		num2.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_2, 0, true), "2");
 		num2.getActionMap().put("2", num2Action);
 		num3.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_NUMPAD3, 0, true),
 				"3");
-		num3.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_3, 0, true),
-				"3");
+		num3.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_3, 0, true), "3");
 		num3.getActionMap().put("3", num3Action);
 		num4.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_NUMPAD4, 0, true),
 				"4");
-		num4.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_4, 0, true),
-				"4");
+		num4.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_4, 0, true), "4");
 		num4.getActionMap().put("4", num4Action);
 		num5.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_NUMPAD5, 0, true),
 				"5");
-		num5.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_5, 0, true),
-				"5");
+		num5.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_5, 0, true), "5");
 		num5.getActionMap().put("5", num5Action);
 		num6.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_NUMPAD6, 0, true),
 				"6");
-		num6.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_6, 0, true),
-				"6");
+		num6.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_6, 0, true), "6");
 		num6.getActionMap().put("6", num6Action);
 		num7.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_NUMPAD7, 0, true),
 				"7");
-		num7.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_7, 0, true),
-				"7");
+		num7.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_7, 0, true), "7");
 		num7.getActionMap().put("7", num7Action);
 		num8.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_NUMPAD8, 0, true),
 				"8");
-		num8.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_8, 0, true),
-				"8");
+		num8.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_8, 0, true), "8");
 		num8.getActionMap().put("8", num8Action);
 		num9.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_NUMPAD9, 0, true),
 				"9");
-		num9.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_9, 0, true),
-				"9");
+		num9.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_9, 0, true), "9");
 		num9.getActionMap().put("9", num9Action);
 		div.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_DIVIDE, 0, true),
 				"/");
@@ -111,8 +101,7 @@ public class MainContainer extends KeyAdapter {
 		mul.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_MULTIPLY, 0, true),
 				"*");
 		mul.getActionMap().put("*", mulAction);
-		add.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_ADD, 0, true),
-				"+");
+		add.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_ADD, 0, true), "+");
 		add.getActionMap().put("+", addAction);
 		sub.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_SUBTRACT, 0, true),
 				"-");
@@ -120,11 +109,9 @@ public class MainContainer extends KeyAdapter {
 		del.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_BACK_SPACE, 0, true),
 				"b");
 		del.getActionMap().put("b", delAction);
-		c.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_C, 0, true),
-				"c");
+		c.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_C, 0, true), "c");
 		c.getActionMap().put("c", cAction);
-		eq.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0, true),
-				"e");
+		eq.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0, true), "e");
 		eq.getActionMap().put("e", eqAction);
 		deci.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_DECIMAL, 0, true),
 				"d");
@@ -281,6 +268,9 @@ public class MainContainer extends KeyAdapter {
 		sqr.setAction(sqrAction);
 		cube.setAction(cubeAction);
 		deci.setAction(deciAction);
+		sign.setAction(signAction);
+		inv.setAction(invAction);
+		root.setAction(rootAction);
 	}
 
 	@SuppressWarnings("serial")
@@ -391,5 +381,21 @@ public class MainContainer extends KeyAdapter {
 				Controller.deci();
 			}
 		};
+		invAction = new AbstractAction("1/x") {
+			public void actionPerformed(ActionEvent e) {
+				Controller.inv();
+			}
+		};
+		signAction = new AbstractAction("\u00B1") {
+			public void actionPerformed(ActionEvent e) {
+				Controller.sign();
+			}
+		};
+		rootAction = new AbstractAction("\u221A") {
+			public void actionPerformed(ActionEvent e) {
+				Controller.root();
+			}
+		};
+
 	}
 }

@@ -74,8 +74,32 @@ public class Controller {
 		}
 	}
 
-	public void root() {
+	public static void root() {
+		m.setDisplayList('\u221A');
+		m.setDisplayList(m.getTemp());
+		m.setTemp(Math.sqrt(m.getTemp()));
+		m.setNumList(m.getTemp());
+		v.top.setText(getDisplayListString());
+		v.down.setText(String.valueOf(adjust(m.getTemp())));
+		setStr();
+		setTemp();
+	}
 
+	public static void sign() {
+		m.setTemp(m.getTemp() * -1);
+		v.down.setText(String.valueOf(adjust(m.getTemp())));
+	}
+
+	public static void inv() {
+		m.setDisplayList(m.getTemp());
+		m.setDisplayList('\u207B');
+		m.setDisplayList('\u00B9');
+		m.setTemp(1 / m.getTemp());
+		m.setNumList(m.getTemp());
+		v.top.setText(getDisplayListString());
+		v.down.setText(String.valueOf(adjust(m.getTemp())));
+		setStr();
+		setTemp();
 	}
 
 	public void sqr() {
@@ -245,7 +269,8 @@ public class Controller {
 			System.out.println(getOpListString());
 			setStr();
 
-		} else if (m.getDisplayList().get(m.getDisplayList().size() - 1).equals('\u00B3')||m.getDisplayList().get(m.getDisplayList().size() - 1).equals('\u00B2')) {
+		} else if (m.getDisplayList().get(m.getDisplayList().size() - 1).equals('\u00B3')
+				|| m.getDisplayList().get(m.getDisplayList().size() - 1).equals('\u00B2')) {
 			m.setDisplayList(c);
 			power(b);
 			v.top.setText(getDisplayListString());
@@ -263,7 +288,7 @@ public class Controller {
 			v.top.setText(getDisplayListString());
 			v.down.setText(adjust(m.getTemp()));
 			System.out.println(getIntListString());
-			System.out.println(getOpListString());	
+			System.out.println(getOpListString());
 			setStr();
 		}
 	}
@@ -328,5 +353,4 @@ public class Controller {
 			}
 		});
 	}
-
 }
