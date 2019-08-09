@@ -15,7 +15,7 @@ public class Controller {
 		m = new Model();
 	}
 
-	public static String getIntListString() {
+	public static String getNumListString() {
 		String str = "";
 		for (int i = 0; i < m.getNumList().size(); i++) {
 			str += String.valueOf(m.getNumList().get(i));
@@ -45,7 +45,7 @@ public class Controller {
 	}
 
 	public static void setTemp() {
-		m.setTemp(0d);
+		m.setTemp(0.0d);
 	}
 
 	public static void delTemp() {
@@ -200,7 +200,7 @@ public class Controller {
 		switch (c) {
 		case "c":
 			cla();
-			v.top.setText(String.valueOf(getIntListString()));
+			v.top.setText(String.valueOf(getNumListString()));
 			v.down.setText(adjust(m.getTemp()));
 			break;
 		case "ce":
@@ -225,7 +225,7 @@ public class Controller {
 			setTemp();
 			v.down.setText(adjust(m.getTemp()));
 			setStr();
-			System.out.println(getIntListString());
+			System.out.println(getNumListString());
 			System.out.println(getOpListString());
 
 		} else if (m.getOpList().size() == 0 || m.getNumList().size() >= 2) {
@@ -238,7 +238,7 @@ public class Controller {
 			m.setOpList(charOperator);
 			v.top.setText(getDisplayListString());
 			v.down.setText(adjust(m.getTemp()));
-			System.out.println(getIntListString());
+			System.out.println(getNumListString());
 			System.out.println(getOpListString());
 			setStr();
 			setTemp();
@@ -251,7 +251,7 @@ public class Controller {
 			m.setOpList(charOperator);
 			v.top.setText(getDisplayListString());
 			v.down.setText(adjust(m.getTemp()));
-			System.out.println(getIntListString());
+			System.out.println(getNumListString());
 			System.out.println(getOpListString());
 			setTemp();
 
@@ -265,7 +265,7 @@ public class Controller {
 			power(b);
 			v.top.setText(getDisplayListString());
 			v.down.setText(adjust(m.getTemp()));
-			System.out.println(getIntListString());
+			System.out.println(getNumListString());
 			System.out.println(getOpListString());
 			setStr();
 
@@ -275,7 +275,7 @@ public class Controller {
 			power(b);
 			v.top.setText(getDisplayListString());
 			v.down.setText(adjust(m.getTemp()));
-			System.out.println(getIntListString());
+			System.out.println(getNumListString());
 			System.out.println(getOpListString());
 			setStr();
 
@@ -287,7 +287,7 @@ public class Controller {
 			power(b);
 			v.top.setText(getDisplayListString());
 			v.down.setText(adjust(m.getTemp()));
-			System.out.println(getIntListString());
+			System.out.println(getNumListString());
 			System.out.println(getOpListString());
 			setStr();
 		}

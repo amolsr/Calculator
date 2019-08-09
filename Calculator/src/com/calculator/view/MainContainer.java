@@ -54,7 +54,6 @@ public class MainContainer extends KeyAdapter {
 	}
 
 	private void bindingKey() {
-		// TODO Auto-generated method stub
 		num0.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_NUMPAD0, 0, true),
 				"0");
 		num0.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_0, 0, true), "0");
@@ -184,7 +183,6 @@ public class MainContainer extends KeyAdapter {
 		frame.getContentPane().add(eq);
 		frame.getContentPane().add(down);
 		frame.getContentPane().add(top);
-
 	}
 
 	public void setFont() {
